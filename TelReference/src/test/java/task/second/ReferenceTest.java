@@ -20,13 +20,15 @@ public class ReferenceTest {
 		ref = new Reference();
 	}
 
+	@Test
 	public void printNumbersTestCorrect1() {
-		String user = "Иванов Н.Н.";
+		String user = "Иванов И.И.";
 		int shownNumbers = ref.showNumbers(user);
 		assertEquals(2, shownNumbers);
 
 	}
 
+	@Test
 	public void printNumbersTestCorrect2() {
 		String user = "Сидоров С.С.";
 		int shownNumbers = ref.showNumbers(user);
@@ -34,6 +36,7 @@ public class ReferenceTest {
 
 	}
 
+	@Test
 	public void printNumbersTestCorrect3() {
 		String user = "Петров П.П.";
 		int shownNumbers = ref.showNumbers(user);
@@ -41,6 +44,7 @@ public class ReferenceTest {
 
 	}
 
+	@Test
 	public void printNumbersTestMissed() {
 		String user = "Никитин В.В.";
 		int shownNumbers = ref.showNumbers(user);
@@ -48,12 +52,14 @@ public class ReferenceTest {
 
 	}
 
+	@Test
 	public void checkFormatTestCorrect() {
 		String user = "Иванов Н.Н.";
 		boolean isValid = ref.checkName(user);
 		assertEquals(true, isValid);
 	}
 
+	@Test
 	public void checkFormatTestIncorrect() {
 		String user = "Иванов Н.";
 		boolean isValid = ref.checkName(user);
