@@ -116,6 +116,8 @@ public class Reference {
 			for (String tel : list) {
 				out.println("\t" + tel);
 			}
+		} else {
+			out.println("There is not any user with name '" + name + "' in DB");
 		}
 		return count;
 
